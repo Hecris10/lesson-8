@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>IDAHO SEASONS | Storm Center</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="./css/small.css" rel="stylesheet">
+    <link href="./css/medium.css" rel="stylesheet">
+    <link href="./css/large.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/icon.png">
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img src="./images/icon.png" alt="Idaho Seaons Logo">
+        </figure>
+        <section class="headings">
+            <h1>IDAHO SEASONS</h1>
+            <div class="m">
+                <h2>Plan Your Vacations</h2>
+            </div>
+        </section>
+    </header>
+    <nav class="clearfix">
+        <button onclick="toggleMenu()">&#9776 MENU</button>
+
+        <ul id="menu" class="hide">
+            <li><a href="https://hecris10.github.io/lesson6.github.io/index.html">🏕 PRESTON</a></li>
+            <li><a href="#">❄ SODA SPRINGS</a></li>
+            <li><a href="#">🐟 FISH HAVEN</a></li>
+            <li><a class="active" href="#">⚡ STORM CENTER</a></li>
+            <li><a href="https://hecris10.github.io/lesson07.github.io/Gallery-7.html">📸 GALLERY</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>STORM CENTER</h1>
+        <form method="get" action="./greetings.html">
+            <fieldset>
+                <legend>Your Information</legend>
+                <label class="top">First Name* <input type="text" name="fname" required></label>
+                <label class="top">Email <input type="email" name="email" placeholder="login@youremail.com"></label>
+                <label class="top">Phone <input type="phone" name="phone" required></label>
+                <label class="top">Zip Code <input type="number" name="zip" required></label>
+                <label class="top">Storm Date <input type="date" name="storm-date"></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Storm Report</legend>
+                <label class="sbs">Storm Type <select name="storm-type">
+                    <option disabled selected>Select Type</option>
+                    <option value="flash">Flash</option>
+                    <option value="flood">Flood</option>
+                    <option value="hail">Hail</option>
+                    <option value="hurricane">Hurricane</option>
+                    <option value="thunderstorm">Thunderstorm</option>
+                    <option value="tornado">Tornado</option>
+                </select></label> Storm Severity <input type="range" value="1" min="1" max="10" list="tickmarks" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
+                <span id="ratingvalue">1</span>
+                <label class="sbs">Region <select name="region">
+                    <option selected disabled>Select Region</option>
+                    <option value="preston">Preston</option>
+                    <option value="soda">Soda Springs</option>
+                    <option value="fish">Fish Haven</option>
+                </select></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your Safety</legend>
+                Are you in danger?
+                <label class="sbs"><input type="radio" name="danger" value="Yes">Yes</input></label>
+                <label class="sbs"><input type="radio" name="danger" value="maybe">Maybe</input></label>
+                <label class="sbs"><input type="radio" name="danger" value="No">No</input>
+                </label>
+
+                <label class="top">Describe the situation<br>
+                    <div class="info">
+                     <input type="textarea" name="information">
+                    </div>
+                </fieldset>
+            <input class="submitBtn" type="submit" name="send" value="Send Your Storm Report">
+        </form>
+    </main>
+    <footer>
+        <p>©IDAHO SEASONS | Attributions | Helaman Ewerton</p>
+        <p><span id="date"></span></p>
+    </footer>
+    <script src="./js/script.js"></script>
+    <script src="./js/webfontload.js"></script>
+</body>

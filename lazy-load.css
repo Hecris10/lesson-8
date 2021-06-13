@@ -1,0 +1,23 @@
+body {
+    max-width: 500px;
+    margin: auto;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+picture {
+    grid-column: inherit;
+}
+
+img[data-src] {
+    filter: blur(0.8em);
+}
+
+img {
+    filter: blur(0em);
+    transition: filter 1.5s;
+}
